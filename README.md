@@ -1,26 +1,28 @@
-📉 Customer Churn Prediction Project
+# 📉 Customer Churn Prediction Project
 
-📌 Objective :
+## 📌 Objective :
 Build an end-to-end Customer Churn Prediction system to identify customers who are likely to leave a service, using machine learning and data-driven insights.
 
 This project focuses on:
-•	Understanding customer behavior through EDA
-•	Creating meaningful features to capture churn patterns
-•	Training and comparing multiple ML models
-•	Optimizing decision thresholds for business impact
+	This project focuses on:
+- Understanding customer behavior through EDA
+- Creating meaningful features to capture churn patterns
+- Training and comparing multiple ML models
+- Optimizing decision thresholds for business impact
 
-📊 Dataset
 
-•	Dataset used: data/raw/Customer churn data.csv
-•	The dataset contains 10,000 customer records with the following information:
-•	Customer demographics (Age, Gender, Country)
-•	Financial attributes (Credit score, Balance, Salary)
-•	Product & engagement data (Tenure, Products, Credit card, Active member)
-•	Target variable: churn
-•	0 → Customer stays
-•	1 → Customer churns
+## 📊 Dataset
 
-🛠️ Libraries Used
+-	Dataset used: data/raw/Customer churn data.csv
+-	The dataset contains 10,000 customer records with the following information:
+-	Customer demographics (Age, Gender, Country)
+-	Financial attributes (Credit score, Balance, Salary)
+-	Product & engagement data (Tenure, Products, Credit card, Active member)
+-	Target variable: churn
+	- 0 → Customer stays
+	- 1 → Customer churns
+
+## 🛠️ Libraries Used
 
 1.	Python
 2.	NumPy
@@ -30,19 +32,21 @@ This project focuses on:
 6.	Scikit-learn
 7.	Jupyter Notebook
 
-📈 Exploratory Data Analysis (EDA)
+## 📈 Exploratory Data Analysis (EDA)
 
 EDA was performed to understand how different factors influence customer churn.
-Key visualizations include:
-	Distribution of numerical features by churn status
-	Pairwise relationships between financial variables
-	Age distribution and tenure analysis
-	Gender, country, and product-based churn comparison
-	Correlation heatmap
-	Balance vs number of products analysis
-	All visualizations are saved in the reports/ folder.
+   Key Visualizations Include:
+- Distribution of numerical features by churn status
+- Pairwise relationships between financial variables
+- Age distribution and tenure analysis
+- Gender-, country-, and product-based churn comparison
+- Correlation heatmap
+- Balance vs number of products analysis
 
-🧠 Feature Engineering
+📁 All visualizations are saved in the `reports/` folder.
+
+
+## 🧠 Feature Engineering
 
 Custom features were created to better capture customer behavior:
 1.	Balance per product
@@ -58,14 +62,15 @@ These features improved both model performance and interpretability.
 ⚙️ Data Preprocessing
 
 A clean and reusable preprocessing pipeline was built using ColumnTransformer:
-•	Numerical Features
-•	Missing value imputation (median)
-•	Standard scaling
-•	Categorical Features
-•	Missing value imputation (most frequent)
-•	One-hot encoding
+  Numerical Features :
+- Missing value imputation (median)
+- Standard scaling
 
-🤖 Models Trained
+  Categorical Features :
+- Missing value imputation (most frequent)
+- One-hot encoding
+
+## 🤖 Models Trained
 
 The following models were trained and evaluated using the same preprocessing pipeline:
 
@@ -73,27 +78,26 @@ The following models were trained and evaluated using the same preprocessing pip
 2.	Random Forest Classifier
 3.	Gradient Boosting Classifier
 
-🎯 Model Evaluation Strategy
 
-Models were evaluated using:
+## 🎯 Model Evaluation Strategy
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- ROC-AUC
+- Confusion Matrix
 
-•	Accuracy
-•	Precision
-•	Recall
-•	F1-Score
-•	ROC-AUC
-•	Confusion Matrix
 
 Since churn prediction is a business-critical problem, recall for churners was prioritized.
 
-🎚️ Threshold Optimization
+## 🎚️ Threshold Optimization
 
 Instead of relying on the default 0.5 probability threshold, multiple thresholds were tested:
 
-	0.50
-	0.40
-	0.35
-	0.30 (best trade-off)
+-	0.50
+-	0.40
+-	0.35
+-	0.30 (best trade-off)
 
 Lowering the threshold significantly improved recall, ensuring fewer churners were missed.
 
@@ -101,23 +105,23 @@ Lowering the threshold significantly improved recall, ensuring fewer churners we
 ✅ Final Model: Gradient Boosting Classifier
 Optimal Threshold: 0.30
 
-Performance Highlights:
+## Performance Highlights:
 
-	High recall for churned customers
-	Balanced precision and F1-score
-	ROC-AUC ≈ 0.87, indicating strong class separation
+-	High recall for churned customers
+-	Balanced precision and F1-score
+-	ROC-AUC ≈ 0.87, indicating strong class separation
 
 This model provides the best balance between business needs and predictive performance.
 
-📌 Key Insights (Summary)
+## 📌 Key Insights (Summary)
 
-•	Customers with low tenure and low engagement are more likely to churn
-•	Zero-balance customers show a higher churn tendency
-•	Customers with multiple products are generally more stable
-•	Credit score and age play an important role in churn behavior
-•	Adjusting the probability threshold improves business-oriented outcomes
+-	Customers with low tenure and low engagement are more likely to churn
+-	Zero-balance customers show a higher churn tendency
+-	Customers with multiple products are generally more stable
+-	Credit score and age play an important role in churn behavior
+-	Adjusting the probability threshold improves business-oriented outcomes
 
-🚀 Future Improvements
+## 🚀 Future Improvements
 
 •	Hyperparameter tuning using GridSearchCV
 •	Advanced models like XGBoost or LightGBM
