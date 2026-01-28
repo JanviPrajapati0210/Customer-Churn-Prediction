@@ -123,8 +123,8 @@ This model provides the best balance between business needs and predictive perfo
 
 ## 🚀 Future Improvements
 
-•	Hyperparameter tuning using GridSearchCV
-•	Advanced models like XGBoost or LightGBM
-•	Model explainability using SHAP
-•	Deployment as a REST API using Flask/FastAPI
+-	Hyperparameter tuning using GridSearchCV
+-	Advanced models like XGBoost or LightGBM
+-	Model explainability using SHAP
+-	Deployment as a REST API using Flask/FastAPI
 
